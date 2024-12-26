@@ -45,3 +45,14 @@ graph TD
     RaspberryPi -->|SSH| 3DPrinterInterface[SpeederPad]
     HX711 -->|Connected to| LoadCell[Load Cell]
 ```
+## Software Technologies
+### Database
+The database requirements should be very lite and is intended to run on a raspberry pi zero w, so the obviour choice is SQLite.
+
+There are three objects stored in the database. 
+- Unique Filament Types - brand / type / colour / other attributes
+- Specific Filament Rolls - an instance of a type of filament, cost, initial weight, current weight
+- Distinct Print Jobs - STL file, filament roll, date and time, completed or aborted, filament used
+
+### QR Codes
+
